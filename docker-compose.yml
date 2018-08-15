@@ -1,0 +1,16 @@
+web:
+  image: nginx
+  ports:
+    - 443:443
+
+  links:
+    - registry:registry
+  volumes:
+    - ./nginx_config:/etc/nginx/conf.d/
+
+registry:
+  image: registry:2
+  ports:
+   - 127.0.0.1:5000:5000
+
+
