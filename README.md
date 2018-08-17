@@ -13,4 +13,12 @@ To run:
 
 Tag/push/pull your images at will, no auth required!
 
+
+### Adding basic auth
+- Uncomment the basic auth related lines in nginx_config/nginx.conf
+- Run the following command: 
+  ```
+  $ docker run --rm -ti melsayed/htpasswd <username> <password> >>  nginx_config/registry.password
+  ```
+  
 Based on: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
